@@ -29,3 +29,10 @@ services:
 
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones
+
+    App\CreateSubscriber\ProductSubscriber:
+        tags:
+            - { name: 'doctrine.event_subscriber' }
+    App\CreateSubscriber\UserSubscriber:
+        tags:
+            - { name: 'doctrine.event_subscriber' }
